@@ -1,2 +1,2 @@
 # pangolin-ui
-The desktop shell for dahlia
+The mobile shell for dahlia
