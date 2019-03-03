@@ -1,2 +1,2 @@
 # pangolin-ui
-a fork of the armadillo ui 
+The desktop shell for dahlia
