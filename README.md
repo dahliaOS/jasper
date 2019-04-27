@@ -1,5 +1,5 @@
 # pangolin-ui
-The mobile shell for dahlia
+mobile shell for dahlia
 
 ## To Use
 
