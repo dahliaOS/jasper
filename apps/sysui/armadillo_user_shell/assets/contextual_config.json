@@ -1,0 +1,18 @@
+{
+  "background_image": {
+    "default": "/system/data/sysui/aparna-sf.jpg",
+    "home": "/system/data/sysui/aparna-home.jpg",
+    "walking": "/system/data/sysui/WallpaperImage_003.jpg",
+    "work": "/system/data/sysui/aparna-work.jpg"
+  },
+  "battery_percentage": {
+  },
+  "date_only": {
+  },
+  "location": {
+  },
+  "time_only": {
+  },
+  "wifi_network": {
+  }
+}

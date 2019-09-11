@@ -1,0 +1,8 @@
+name: lorem
+description: Lorem ipsum text generator
+version: 0.1.0
+author: Andres Araujo <a.araujo.azua@gmail.com>
+homepage: https://github.com/andresaraujo/lorem-dart
+
+dev_dependencies:
+  unittest: any

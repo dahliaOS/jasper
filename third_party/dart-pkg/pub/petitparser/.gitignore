@@ -1,0 +1,7 @@
+*.iml
+.DS_Store
+.idea/
+.packages
+.pub
+packages
+pubspec.lock

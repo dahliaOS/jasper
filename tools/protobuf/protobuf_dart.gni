@@ -1,0 +1,175 @@
+# Copyright 2018 The Fuchsia Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+import("//build/dart/dart_library.gni")
+
+# Generates dart bindings for a set of protobuf files
+#
+# Parameters:
+#   sources (required)
+#      List of .proto files to generate bindings for.
+#
+#   deps (optional)
+#       Other protobuf_dart() targets this depends on.
+template("protobuf_dart") {
+  assert(defined(invoker.sources), "Need a list of .proto sources")
+
+  package_name =
+      exec_script("//build/dart/label_to_package_name.py",
+                  [ get_label_info(target_name, "label_no_toolchain") ],
+                  "trim string")
+
+  # This is the generated dart package'source root directory is (where the
+  # pubspec.yaml, etc. go).
+  package_root_dir = "$target_gen_dir/$target_name"
+
+  # This is where we put the generated files.
+  package_gen_dir = "$package_root_dir/lib"
+
+  # Compute the list of generated files.
+  proto_output_filepaths = []
+  foreach(source, invoker.sources) {
+    # Extract where the generated file will be.
+    gen_dir = []
+    gen_dir = process_file_template([ source ], "{{source_gen_dir}}")
+
+    # extract the non-extension part of the file.
+    name_part = []
+    name_part = process_file_template([ source ], "{{source_name_part}}")
+
+    source_prefix = "$package_gen_dir/" +
+                    rebase_path(gen_dir[0], target_gen_dir) + "/${name_part[0]}"
+
+    proto_output_filepaths += [
+      "${source_prefix}.pb.dart",
+      "${source_prefix}.pbenum.dart",
+      "${source_prefix}.pbjson.dart",
+      "${source_prefix}.pbserver.dart",
+    ]
+  }
+
+  protoc_label = "//third_party/protobuf:protoc($host_toolchain)"
+  protoc_gen_dart_label =
+      "//topaz/tools/protobuf/protoc_gen_dart($host_toolchain)"
+
+  protoc_path = get_label_info(protoc_label, "root_out_dir") + "/protoc"
+  proto_in_dir = get_path_info(".", "abspath")
+  proto_gen_target = target_name + "_generate_bindings"
+  copy_pubspec_target = target_name + "_copy_pubspec"
+
+  # We generate a `.protoc_option` suffixed file that contains the options our
+  # dependent targets would want to pass to their protoc_gen_tool. This file
+  # contains a mapping from this package's name => path to this package's root.
+  # This mapping is used by our dependent's bindings generator to translate the
+  # file-based proto imports pointing to this package into generated
+  # package-based imports in dart.
+  write_file(
+      "$target_gen_dir/${target_name}.protoc_option",
+      "$package_name|" + rebase_path(get_path_info(".", "abspath"), "//"),
+      "string")
+
+  # This target runs the protoc tool to generate dart sources
+  action(proto_gen_target) {
+    visibility = [ ":*" ]
+
+    script = "//third_party/protobuf/protoc_wrapper.py"
+    sources = invoker.sources
+    inputs = [ protoc_path ] + invoker.sources
+    outputs = proto_output_filepaths
+
+    # dart generator options are supplied to
+    # //topaz/tools/protobuf/protoc_gen_dart. We gather all of the options that
+    # our dependencies have outputted (in the write_file() above) and pass those
+    # along to protoc_gen_dart.
+    opts = ""
+    if (defined(invoker.deps)) {
+      foreach(dep, invoker.deps) {
+        if (opts != "") {
+          opts += ";"
+        }
+        dep_opt_path = get_label_info(dep, "target_gen_dir") + "/" +
+                       get_label_info(dep, "name") + ".protoc_option"
+        opts += read_file(dep_opt_path, "trim string")
+      }
+    }
+
+    args = [
+      # path to compiler
+      "--protoc",
+      rebase_path(protoc_path, root_build_dir),
+
+      # the directory the supplied proto paths are in
+      "--proto-in-dir",
+      rebase_path(proto_in_dir, root_build_dir),
+
+      # extra import dir for .proto files: the root of fuchsia tree
+      "--import-dir=" + rebase_path("//"),
+
+      # the dart bindings generator
+      "--plugin",
+      rebase_path(get_label_info(protoc_gen_dart_label, "root_out_dir") +
+                      "/dart-tools/protoc_gen_dart",
+                  root_build_dir),
+
+      # output path of where bindings are generated
+      "--plugin-out-dir",
+      rebase_path(package_gen_dir),
+    ]
+    if (opts != "") {
+      args += [
+        "--plugin-options",
+
+        # package mapping for our target and our dependencies.
+        "PackagePaths=${opts};${package_name}|" +
+            rebase_path(proto_in_dir, "//"),
+      ]
+    }
+
+    # the proto files themselves
+    args += invoker.sources
+
+    deps = [
+      # dart plugin for the protobuf compiler
+      # protobuf compiler
+      protoc_gen_dart_label,
+      protoc_label,
+    ]
+  }
+
+  copy(copy_pubspec_target) {
+    visibility = [ ":*" ]
+
+    sources = [
+      "//build/dart/empty_pubspec.yaml",
+    ]
+
+    outputs = [
+      "$package_root_dir/pubspec.yaml",
+    ]
+  }
+
+  # Using the dart sources generated from "gen" above, this constructs a dart
+  # library out of them.
+  dart_library(target_name) {
+    forward_variables_from(invoker, [ "deps" ])
+
+    disable_analysis = true
+    package_root = package_root_dir
+    package_name = package_name
+
+    sources = proto_output_filepaths
+
+    deps = [
+      "//third_party/dart-pkg/pub/protobuf",
+    ]
+    if (defined(invoker.deps)) {
+      deps += invoker.deps
+    }
+
+    non_dart_deps = [
+      ":$proto_gen_target",
+      ":$copy_pubspec_target",
+    ]
+  }
+}

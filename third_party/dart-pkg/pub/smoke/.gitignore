@@ -1,0 +1,7 @@
+pubspec.lock
+.pub
+packages
+.idea
+/build/
+.packages
+.analysis_options

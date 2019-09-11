@@ -1,0 +1,18 @@
+# Copyright 2016 The Fuchsia Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+import("//build/dart/dart_package.gni")
+
+dart_package("config_flutter") {
+  package_name = "config_flutter"
+
+  source_dir = "lib"
+
+  deps = [
+    "//apps/modules/common/packages/config",
+    "//lib/flutter/packages/flutter",
+  ]
+
+  analysis_options = "//apps/modules/common/.analysis_options"
+}

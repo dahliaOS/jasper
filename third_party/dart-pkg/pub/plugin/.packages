@@ -1,0 +1,9 @@
+# Generate by pub on 2015-08-05 11:12:40.575.
+# This file contains a map from Dart package names to Dart package locations.
+# Dart tools, including the Dart VM and Dart analyzer, rely on the content.
+# AUTO GENERATED - DO NOT EDIT
+matcher:file:///Users/brianwilkerson/.pub-cache/hosted/pub.dartlang.org/matcher-0.11.4+3/lib/
+path:file:///Users/brianwilkerson/.pub-cache/hosted/pub.dartlang.org/path-1.3.3/lib/
+plugin:lib/
+stack_trace:file:///Users/brianwilkerson/.pub-cache/hosted/pub.dartlang.org/stack_trace-1.2.4/lib/
+unittest:file:///Users/brianwilkerson/.pub-cache/hosted/pub.dartlang.org/unittest-0.11.5+4/lib/

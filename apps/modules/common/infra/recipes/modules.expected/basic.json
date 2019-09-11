@@ -1,0 +1,226 @@
+[
+  {
+    "cmd": [],
+    "name": "ensure_goma"
+  },
+  {
+    "cmd": [
+      "python",
+      "-u",
+      "RECIPE_MODULE[infra::cipd]/resources/bootstrap.py",
+      "--platform",
+      "linux-amd64",
+      "--dest-directory",
+      "[START_DIR]/cipd",
+      "--json-output",
+      "/path/to/tmp/json"
+    ],
+    "name": "ensure_goma.install cipd",
+    "~followup_annotations": [
+      "@@@STEP_NEST_LEVEL@1@@@",
+      "@@@STEP_TEXT@cipd version: git_revision:05844bd9d1200cba8449b936b76e25eb90eabe25@@@",
+      "@@@STEP_LOG_LINE@json.output@{@@@",
+      "@@@STEP_LOG_LINE@json.output@  \"executable\": \"[START_DIR]/cipd/cipd\", @@@",
+      "@@@STEP_LOG_LINE@json.output@  \"version\": \"git_revision:05844bd9d1200cba8449b936b76e25eb90eabe25\"@@@",
+      "@@@STEP_LOG_LINE@json.output@}@@@",
+      "@@@STEP_LOG_END@json.output@@@"
+    ]
+  },
+  {
+    "cmd": [
+      "[START_DIR]/cipd/cipd",
+      "ensure",
+      "--root",
+      "[START_DIR]/cipd/goma",
+      "--list",
+      "infra_internal/goma/client/linux-amd64 release",
+      "--json-output",
+      "/path/to/tmp/json",
+      "--service-account-json",
+      "/creds/service_accounts/service-account-goma-client.json"
+    ],
+    "name": "ensure_goma.ensure_installed",
+    "~followup_annotations": [
+      "@@@STEP_NEST_LEVEL@1@@@",
+      "@@@STEP_LOG_LINE@json.output@{@@@",
+      "@@@STEP_LOG_LINE@json.output@  \"result\": [@@@",
+      "@@@STEP_LOG_LINE@json.output@    {@@@",
+      "@@@STEP_LOG_LINE@json.output@      \"instance_id\": \"resolved-instance_id-of-release---------\", @@@",
+      "@@@STEP_LOG_LINE@json.output@      \"package\": \"infra_internal/goma/client/linux-amd64\"@@@",
+      "@@@STEP_LOG_LINE@json.output@    }@@@",
+      "@@@STEP_LOG_LINE@json.output@  ]@@@",
+      "@@@STEP_LOG_LINE@json.output@}@@@",
+      "@@@STEP_LOG_END@json.output@@@"
+    ]
+  },
+  {
+    "cmd": [],
+    "name": "ensure_jiri"
+  },
+  {
+    "cmd": [
+      "python",
+      "-u",
+      "RECIPE_MODULE[infra::cipd]/resources/bootstrap.py",
+      "--platform",
+      "linux-amd64",
+      "--dest-directory",
+      "[START_DIR]/cipd",
+      "--json-output",
+      "/path/to/tmp/json"
+    ],
+    "name": "ensure_jiri.install cipd",
+    "~followup_annotations": [
+      "@@@STEP_NEST_LEVEL@1@@@",
+      "@@@STEP_TEXT@cipd version: git_revision:05844bd9d1200cba8449b936b76e25eb90eabe25@@@",
+      "@@@STEP_LOG_LINE@json.output@{@@@",
+      "@@@STEP_LOG_LINE@json.output@  \"executable\": \"[START_DIR]/cipd/cipd\", @@@",
+      "@@@STEP_LOG_LINE@json.output@  \"version\": \"git_revision:05844bd9d1200cba8449b936b76e25eb90eabe25\"@@@",
+      "@@@STEP_LOG_LINE@json.output@}@@@",
+      "@@@STEP_LOG_END@json.output@@@"
+    ]
+  },
+  {
+    "cmd": [
+      "[START_DIR]/cipd/cipd",
+      "ensure",
+      "--root",
+      "[START_DIR]/cipd/jiri",
+      "--list",
+      "fuchsia/tools/jiri/linux-amd64 latest",
+      "--json-output",
+      "/path/to/tmp/json",
+      "--service-account-json",
+      "/creds/service_accounts/service-account-goma-client.json"
+    ],
+    "name": "ensure_jiri.ensure_installed",
+    "~followup_annotations": [
+      "@@@STEP_NEST_LEVEL@1@@@",
+      "@@@STEP_LOG_LINE@json.output@{@@@",
+      "@@@STEP_LOG_LINE@json.output@  \"result\": [@@@",
+      "@@@STEP_LOG_LINE@json.output@    {@@@",
+      "@@@STEP_LOG_LINE@json.output@      \"instance_id\": \"resolved-instance_id-of-latest----------\", @@@",
+      "@@@STEP_LOG_LINE@json.output@      \"package\": \"fuchsia/tools/jiri/linux-amd64\"@@@",
+      "@@@STEP_LOG_LINE@json.output@    }@@@",
+      "@@@STEP_LOG_LINE@json.output@  ]@@@",
+      "@@@STEP_LOG_LINE@json.output@}@@@",
+      "@@@STEP_LOG_END@json.output@@@"
+    ]
+  },
+  {
+    "cmd": [
+      "[START_DIR]/cipd/jiri/jiri",
+      "init",
+      "-cache",
+      "[CACHE]/git"
+    ],
+    "name": "jiri init"
+  },
+  {
+    "cmd": [
+      "[START_DIR]/cipd/jiri/jiri",
+      "import",
+      "userspace",
+      "https://fuchsia.googlesource.com/manifest"
+    ],
+    "name": "jiri import"
+  },
+  {
+    "cmd": [
+      "[START_DIR]/cipd/jiri/jiri",
+      "update",
+      "-autoupdate=false"
+    ],
+    "name": "jiri update"
+  },
+  {
+    "cmd": [
+      "[START_DIR]/cipd/jiri/jiri",
+      "snapshot",
+      "/path/to/tmp/"
+    ],
+    "name": "jiri snapshot",
+    "~followup_annotations": [
+      "@@@STEP_LOG_LINE@jiri.snapshot@@@@",
+      "@@@STEP_LOG_LINE@jiri.snapshot@<manifest>@@@",
+      "@@@STEP_LOG_LINE@jiri.snapshot@  <projects>@@@",
+      "@@@STEP_LOG_LINE@jiri.snapshot@    <project name=\"manifest\" path=\"manifest\" remote=\"https://fuchsia.googlesource.com/manifest\" revision=\"4c2b0da3c06341db5cebe4d02c78c93c3b2bd78b\"/>@@@",
+      "@@@STEP_LOG_LINE@jiri.snapshot@  </projects>@@@",
+      "@@@STEP_LOG_LINE@jiri.snapshot@</manifest>@@@",
+      "@@@STEP_LOG_END@jiri.snapshot@@@"
+    ]
+  },
+  {
+    "cmd": [
+      "python",
+      "-u",
+      "[START_DIR]/cipd/goma/goma_ctl.py",
+      "restart"
+    ],
+    "env": {
+      "GOMA_CACHE_DIR": "[CACHE]/goma",
+      "GOMA_SERVICE_ACCOUNT_JSON_FILE": "/creds/service_accounts/service-account-goma-client.json"
+    },
+    "name": "start_goma"
+  },
+  {
+    "cmd": [
+      "make",
+      "presubmit"
+    ],
+    "cwd": "[START_DIR]/apps/modules",
+    "env": {
+      "GOMA": "1",
+      "GOMA_DIR": "[START_DIR]/cipd/goma",
+      "MINIMAL": "1",
+      "NO_ENSURE_GOMA": "1",
+      "PUB_CACHE": "[CACHE]/pub"
+    },
+    "name": "build and run presubmit tests"
+  },
+  {
+    "cmd": [
+      "python",
+      "-u",
+      "[START_DIR]/cipd/goma/goma_ctl.py",
+      "jsonstatus",
+      "[START_DIR]/cipd/goma/jsonstatus"
+    ],
+    "env": {
+      "GOMA_CACHE_DIR": "[CACHE]/goma",
+      "GOMA_SERVICE_ACCOUNT_JSON_FILE": "/creds/service_accounts/service-account-goma-client.json"
+    },
+    "name": "goma_jsonstatus"
+  },
+  {
+    "cmd": [
+      "python",
+      "-u",
+      "[START_DIR]/cipd/goma/goma_ctl.py",
+      "stat"
+    ],
+    "env": {
+      "GOMA_CACHE_DIR": "[CACHE]/goma",
+      "GOMA_SERVICE_ACCOUNT_JSON_FILE": "/creds/service_accounts/service-account-goma-client.json"
+    },
+    "name": "goma_stat"
+  },
+  {
+    "cmd": [
+      "python",
+      "-u",
+      "[START_DIR]/cipd/goma/goma_ctl.py",
+      "stop"
+    ],
+    "env": {
+      "GOMA_CACHE_DIR": "[CACHE]/goma",
+      "GOMA_SERVICE_ACCOUNT_JSON_FILE": "/creds/service_accounts/service-account-goma-client.json"
+    },
+    "name": "stop_goma"
+  },
+  {
+    "name": "$result",
+    "recipe_result": null,
+    "status_code": 0
+  }
+]

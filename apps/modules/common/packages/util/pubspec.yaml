@@ -1,0 +1,18 @@
+# Copyright 2016 The Fuchsia Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+name: util
+description: Utilities
+
+environment:
+  sdk: "<3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  intl: any
+dev_dependencies:
+  test: any
+  flutter_test:
+    sdk: flutter

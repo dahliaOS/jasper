@@ -1,0 +1,23 @@
+# Copyright 2016 The Fuchsia Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+import("//flutter/build/flutter_app.gni")
+
+flutter_app("chess") {
+  main_dart = "lib/main.dart"
+
+  manifest = "pubspec.yaml"
+
+  deps = [
+    "//application/lib/app/dart",
+    "//application/services:services_dart",
+    "//apps/modular/services/module:module_dart",
+    "//apps/modular/services/story:story_dart",
+    "//apps/mozart/services/views:views_dart",
+    "//lib/fidl/dart",
+    "//lib/flutter/packages/flutter",
+  ]
+
+  analysis_options = "//apps/modules/common/.analysis_options"
+}

@@ -1,0 +1,19 @@
+name: file
+version: 2.3.2
+authors:
+- Matan Lurey <matanl@google.com>
+- Yegor Jbanov <yjbanov@google.com>
+- Todd Volkert <tvolkert@google.com>
+description: A pluggable, mockable file system abstraction for Dart.
+homepage: https://github.com/google/file.dart
+
+dependencies:
+  intl: ^0.14.0
+  meta: ^1.0.4
+  path: ^1.4.0
+
+dev_dependencies:
+  test: ^0.12.18
+
+environment:
+  sdk: '>=1.19.0 <2.0.0'

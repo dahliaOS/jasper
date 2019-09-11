@@ -1,0 +1,15 @@
+{
+  "fuchsia:component": {
+    "name": "gallery",
+    "url": "file:///system/apps/gallery"
+  },
+  "fuchsia:program": {
+    "resource": "main"
+  },
+  "fuchsia:resources": {
+    "main": "gallery_component"
+  },
+  "fuchsia:module": {
+    "contract": "image search"
+  }
+}

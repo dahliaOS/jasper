@@ -1,0 +1,10 @@
+_book
+node_modules
+third_party
+coverage
+.packages
+*.snapshot
+.DS_Store
+.atom/
+.idea
+.pub/

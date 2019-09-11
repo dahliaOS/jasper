@@ -1,0 +1,12 @@
+# Copyright 2016 The Fuchsia Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+name: modules
+dependencies:
+  flutter_flux: ^4.0.1
+  flutter_markdown: ^0.0.9
+  googleapis_auth: ^0.2.3
+  googleapis: ^0.32.0
+  lorem: ^0.1.0
+  uuid: ^0.5.3

@@ -1,0 +1,55 @@
+// Copyright (c) 2017, the Dart project authors.  Please see the AUTHORS file
+// for details. All rights reserved. Use of this source code is governed by a
+// BSD-style license that can be found in the LICENSE file.
+
+import 'dart:async';
+import 'dart:convert';
+
+import 'package:file/file.dart';
+
+import 'codecs.dart';
+import 'replay_file_system.dart';
+import 'replay_proxy_mixin.dart';
+
+/// [IOSink] implementation that replays all invocation activity from a prior
+/// recording.
+class ReplayIOSink extends ReplayProxyMixin implements IOSink {
+  final ReplayFileSystemImpl _fileSystem;
+
+  /// Creates a new [ReplayIOSink].
+  ReplayIOSink(this._fileSystem, this.identifier) {
+    methods.addAll(<Symbol, Converter<dynamic, dynamic>>{
+      #add: const Passthrough<Null>(),
+      #write: const Passthrough<Null>(),
+      #writeAll: const Passthrough<Null>(),
+      #writeln: const Passthrough<Null>(),
+      #writeCharCode: const Passthrough<Null>(),
+      #addError: const Passthrough<Null>(),
+      #addStream: const ToFuture<dynamic>(),
+      #flush: const ToFuture<dynamic>(),
+      #close: const ToFuture<dynamic>(),
+    });
+
+    properties.addAll(<Symbol, Converter<dynamic, dynamic>>{
+      #encoding: EncodingCodec.deserialize,
+      const Symbol('encoding='): const Passthrough<Null>(),
+      #done: const Passthrough<dynamic>().fuse(const ToFuture<dynamic>()),
+    });
+  }
+
+  @override
+  final String identifier;
+
+  @override
+  List<Map<String, dynamic>> get manifest => _fileSystem.manifest;
+
+  @override
+  dynamic onResult(Invocation invocation, dynamic result) {
+    if (invocation.memberName == #addStream) {
+      Stream<List<int>> stream = invocation.positionalArguments.first;
+      Future<dynamic> future = result;
+      return future.then((_) => stream.drain());
+    }
+    return result;
+  }
+}

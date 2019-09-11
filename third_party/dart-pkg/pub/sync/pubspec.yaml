@@ -1,0 +1,11 @@
+name: sync
+description: A library for managing asynchronous processes inspired by the Go sync package.
+version: 0.1.0+1
+author: Steven Roose <stevenroose@gmail.com>
+homepage: https://github.com/stevenroose/dart-sync
+
+environment:
+  sdk: ">=1.0.0 <2.0.0"
+
+dev_dependencies:
+  test: ">=0.12.0 <0.13.0"

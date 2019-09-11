@@ -1,0 +1,17 @@
+Determining the MIME type for a file
+------------------------------------
+
+The `MimeTypeResolver` class can be used to find the MIME type for a
+given file. It supports both using the extention of the file name and
+possibly magic bytes from the begining of the file.
+
+You can 
+
+Processing a multipart 
+
+
+/**
+ * Parser for MIME multipart types of data as described in RFC 2046
+ * section 5.1.1. The data is transformed into [MimeMultipart] objects, each
+ * of them streaming the multipart data.
+ */

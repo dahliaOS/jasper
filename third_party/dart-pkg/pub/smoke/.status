@@ -1,0 +1,22 @@
+# Copyright (c) 2012, the Dart project authors.  Please see the AUTHORS file
+# for details. All rights reserved. Use of this source code is governed by a
+# BSD-style license that can be found in the LICENSE file.
+
+# Don't run any test-like files that show up in packages directories. It
+# shouldn't be necessary to run "pub install" in these packages, but if you do
+# it shouldn't break the tests.
+*/packages/*/*: Skip
+*/*/packages/*/*: Skip
+*/*/*/packages/*/*: Skip
+*/*/*/*/packages/*/*: Skip
+*/*/*/*/*/packages/*/*: Skip
+
+[ $runtime == vm && $mode == debug]
+test/codegen/end_to_end_test: Skip  # Times out
+test/codegen/recorder_test: Skip  # Times out
+
+[ $browser ]
+build/test/codegen/end_to_end_test: Skip # Uses dart:io.
+build/test/codegen/recorder_test: Skip # Uses dart:io.
+test/codegen/end_to_end_test: Skip # Uses dart:io.
+test/codegen/recorder_test: Skip # Uses dart:io.

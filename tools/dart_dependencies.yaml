@@ -1,0 +1,20 @@
+# Copyright 2016 The Fuchsia Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+name: modules
+dependencies:
+  built_collection: ^4.0.0
+  built_value: ^6.1.4
+  fake_async: ^1.0.1
+  flutter_flux: ^4.1.2
+  flutter_markdown: ^0.2.0
+  flutter_staggered_grid_view: "^0.2.2"
+  googleapis_auth: ^0.2.5+2
+  googleapis: ^0.52.0+1
+  html_unescape: ^1.0.1
+  markdown: ^2.0.2
+  protobuf: ^0.10.4
+  protoc_plugin: ^0.10.5
+  strings: ^0.1.0
+  uuid: ^1.0.3

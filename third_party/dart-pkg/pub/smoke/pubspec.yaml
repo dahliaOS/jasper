@@ -1,0 +1,24 @@
+name: smoke
+version: 0.3.6+3
+author: Polymer.dart Authors <web-ui-dev@dartlang.org>
+homepage: https://github.com/dart-lang/smoke
+description: >
+  A restricted reflective system that uses mirrors at development time, but that
+  can be replaced with non-reflective calls using code generation. See README.md
+  for mode details.
+dependencies:
+  barback: ">=0.9.0 <0.16.0"
+  logging: ">=0.9.0 <0.12.0"
+  analyzer: ">=0.27.0 <0.30.0"
+# TODO(sigmund): once we have some easier way to do global app-level
+# transformers, we might want to remove this transformer here and only apply it
+# in apps that need it.
+transformers:
+- smoke/src/default_transformer:
+    $include: lib/src/implementation.dart
+dev_dependencies:
+  test: "^0.12.0"
+  path: "^1.0.0"
+  transformer_test: "^0.2.0"
+environment:
+  sdk: ">=1.12.0 <2.0.0"

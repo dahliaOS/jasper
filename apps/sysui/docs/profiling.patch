@@ -1,0 +1,77 @@
+From b8706676f7368eb18d7573acf1cc226445dabca7 Mon Sep 17 00:00:00 2001
+From: Andrew Wilson <apwilson@google.com>
+Date: Mon, 7 Nov 2016 14:03:35 -0800
+Subject: [PATCH] Enable detailed profiling in --profile mode.
+
+---
+ packages/flutter/lib/src/rendering/object.dart  | 14 ++++----------
+ packages/flutter/lib/src/widgets/framework.dart | 14 ++++----------
+ 2 files changed, 8 insertions(+), 20 deletions(-)
+
+diff --git a/packages/flutter/lib/src/rendering/object.dart b/packages/flutter/lib/src/rendering/object.dart
+index a3ac6ac..82652ee 100644
+--- a/packages/flutter/lib/src/rendering/object.dart
++++ b/packages/flutter/lib/src/rendering/object.dart
+@@ -95,11 +95,8 @@ class PaintingContext {
+   /// into the layer subtree associated with this painting context. Otherwise,
+   /// the child will be painted into the current PictureLayer for this context.
+   void paintChild(RenderObject child, Offset offset) {
+-    assert(() {
+-      if (debugProfilePaintsEnabled)
+-        Timeline.startSync('${child.runtimeType}');
+-      return true;
+-    });
++    if (debugProfilePaintsEnabled)
++      Timeline.startSync('${child.runtimeType}');
+ 
+     if (child.isRepaintBoundary) {
+       _stopRecordingIfNeeded();
+@@ -108,11 +105,8 @@ class PaintingContext {
+       child._paintWithContext(this, offset);
+     }
+ 
+-    assert(() {
+-      if (debugProfilePaintsEnabled)
+-        Timeline.finishSync();
+-      return true;
+-    });
++    if (debugProfilePaintsEnabled)
++      Timeline.finishSync();
+   }
+ 
+   void _compositeChild(RenderObject child, Offset offset) {
+diff --git a/packages/flutter/lib/src/widgets/framework.dart b/packages/flutter/lib/src/widgets/framework.dart
+index 9710f70..7598694 100644
+--- a/packages/flutter/lib/src/widgets/framework.dart
++++ b/packages/flutter/lib/src/widgets/framework.dart
+@@ -2846,11 +2846,8 @@ abstract class ComponentElement extends BuildableElement {
+   /// [rebuild] when the element needs updating.
+   @override
+   void performRebuild() {
+-    assert(() {
+-      if (debugProfileBuildsEnabled)
+-        Timeline.startSync('${widget.runtimeType}');
+-      return true;
+-    });
++    if (debugProfileBuildsEnabled)
++      Timeline.startSync('${widget.runtimeType}');
+ 
+     assert(_debugSetAllowIgnoredCallsToMarkNeedsBuild(true));
+     Widget built;
+@@ -2875,11 +2872,8 @@ abstract class ComponentElement extends BuildableElement {
+       _child = updateChild(null, built, slot);
+     }
+ 
+-    assert(() {
+-      if (debugProfileBuildsEnabled)
+-        Timeline.finishSync();
+-      return true;
+-    });
++    if (debugProfileBuildsEnabled)
++      Timeline.finishSync();
+   }
+ 
+   @override
+-- 
+2.8.0.rc3.226.g39d4020
+

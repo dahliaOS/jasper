@@ -1,0 +1,13 @@
+.jiri
+.packages
+.project
+.pub
+build
+packages
+pubspec.lock
+/out
+/third_party/flutter
+
+# OS and editor generated files
+*~
+.DS_Store

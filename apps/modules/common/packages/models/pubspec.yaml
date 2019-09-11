@@ -1,0 +1,24 @@
+# Copyright 2016 The Fuchsia Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+name: models
+description: Data models used by the gallery widgets
+
+environment:
+  sdk: "<3.0.0"
+
+dependencies:
+  collection: ^1.9.1
+  fixtures:
+    path: ../fixtures
+  intl: any
+  util:
+    path: ../util
+  widgets_meta:
+    path: ../widgets_meta
+  xml: any
+dev_dependencies:
+  test: any
+  flutter_test:
+    sdk: flutter

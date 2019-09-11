@@ -1,0 +1,4 @@
+# Nothing to ignore specifically, but this file needs to be here to make the
+# VSCode Dart Code plug-in to work correctly.
+# https://github.com/Dart-Code/Dart-Code/issues/275
+# https://github.com/Dart-Code/Dart-Code/issues/284

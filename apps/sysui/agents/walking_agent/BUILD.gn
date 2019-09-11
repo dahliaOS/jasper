@@ -1,0 +1,19 @@
+# Copyright 2017 The Fuchsia Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+import("//apps/dart_content_handler/dart_app.gni")
+
+dart_app("walking_agent") {
+
+  main_dart = "lib/main.dart"
+
+  deps = [
+    "//application/lib/app/dart",
+    "//apps/maxwell/services/context:context_dart",
+    "//apps/maxwell/services/suggestion:suggestion_dart",
+    "//apps/maxwell/services/user:user_dart",
+    "//lib/fidl/dart",
+    "//lib/widgets/packages/modular:lib.modular",
+  ]
+}

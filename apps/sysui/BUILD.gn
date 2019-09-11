@@ -1,0 +1,327 @@
+# Copyright 2016 The Fuchsia Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+import("//packages/package.gni")
+
+package("sysui") {
+  app = true
+
+  deps = [
+    "//apps/sysui/agents/home_work_agent",
+    "//apps/sysui/agents/walking_agent",
+    "//apps/sysui/armadillo_user_shell",
+    "//apps/sysui/capybara_user_shell",
+    "//apps/sysui/infinite_scroller",
+    "//apps/sysui/kernel_panic",
+    "//apps/sysui/spinning_cube",
+    "//apps/sysui/userpicker_device_shell",
+  ]
+
+  binaries = [
+    {
+      source = "gen/apps/sysui/armadillo_user_shell/armadillo_user_shell.flx"
+      name = "armadillo_user_shell"
+    },
+
+    {
+      source = "gen/apps/sysui/capybara_user_shell/capybara_user_shell.flx"
+      name = "capybara_user_shell"
+    },
+
+    {
+      source = "gen/apps/sysui/kernel_panic/kernel_panic.flx"
+      name = "kernel_panic"
+    },
+
+    {
+      source =
+          "gen/apps/sysui/userpicker_device_shell/userpicker_device_shell.flx"
+      name = "userpicker_device_shell"
+    },
+
+    {
+      source = "gen/apps/sysui/spinning_cube/spinning_cube.flx"
+      name = "spinning_cube"
+    },
+
+    {
+      source = "gen/apps/sysui/infinite_scroller/infinite_scroller.flx"
+      name = "infinite_scroller"
+    },
+
+    {
+      name = "home_work_agent.dartx"
+      dest = "agents/home_work_agent"
+    },
+
+    {
+      name = "walking_agent.dartx"
+      dest = "agents/walking_agent"
+    },
+  ]
+
+  resources = [
+    {
+      path = rebase_path(
+              "agents/home_work_agent/assets/contextual_location_proposals.json")
+      dest = "sysui/contextual_location_proposals.json"
+    },
+
+    {
+      path = rebase_path("armadillo_user_shell/assets/contextual_config.json")
+      dest = "sysui/contextual_config.json"
+    },
+
+    {
+      path = rebase_path("armadillo_user_shell/assets/WallpaperImage_001.jpg")
+      dest = "sysui/WallpaperImage_001.jpg"
+    },
+
+    {
+      path = rebase_path("armadillo_user_shell/assets/WallpaperImage_002.jpg")
+      dest = "sysui/WallpaperImage_002.jpg"
+    },
+
+    {
+      path = rebase_path("armadillo_user_shell/assets/WallpaperImage_003.jpg")
+      dest = "sysui/WallpaperImage_003.jpg"
+    },
+
+    {
+      path = rebase_path("armadillo_user_shell/assets/WallpaperImage_004.jpg")
+      dest = "sysui/WallpaperImage_004.jpg"
+    },
+
+    {
+      path = rebase_path("armadillo_user_shell/assets/aparna-home.jpg")
+      dest = "sysui/aparna-home.jpg"
+    },
+
+    {
+      path = rebase_path("armadillo_user_shell/assets/aparna-sf.jpg")
+      dest = "sysui/aparna-sf.jpg"
+    },
+
+    {
+      path = rebase_path("armadillo_user_shell/assets/aparna-work.jpg")
+      dest = "sysui/aparna-work.jpg"
+    },
+
+    {
+      path = rebase_path("armadillo_user_shell/assets/danielle-home.jpg")
+      dest = "sysui/danielle-home.jpg"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/ask_proposals.json")
+      dest = "sysui/ask_proposals.json"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/google_photos.png")
+      dest = "sysui/google_photos.png"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/panda.png.jpg")
+      dest = "sysui/panda.png.jpg"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/pavlova.jpg")
+      dest = "sysui/pavlova.jpg"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/shamra.jpg")
+      dest = "sysui/shamra.jpg"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/slides.png")
+      dest = "sysui/slides.png"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/story_fluxMemories.png")
+      dest = "sysui/story_fluxMemories.png"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/story_googleIO.png")
+      dest = "sysui/story_googleIO.png"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/story_hype.png")
+      dest = "sysui/story_hype.png"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/story_natureSense.png")
+      dest = "sysui/story_natureSense.png"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/story_topcook.png")
+      dest = "sysui/story_topcook.png"
+    },
+
+    {
+      path =
+          rebase_path("agents/home_work_agent/assets/1-portugal-the-man.jpeg")
+      dest = "sysui/1-portugal-the-man.jpeg"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/9-hotel.jpg")
+      dest = "sysui/9-hotel.jpg"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/9-nonch-harpin.png")
+      dest = "sysui/9-nonch-harpin.png"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/danielle_cc0.jpg")
+      dest = "sysui/danielle_cc0.jpg"
+    },
+
+    {
+      path = rebase_path(
+              "agents/home_work_agent/assets/ic_stat_3_googblue_2x_web_24dp.png")
+      dest = "sysui/ic_stat_3_googblue_2x_web_24dp.png"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/calendar.png")
+      dest = "sysui/calendar.png"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/docs.png")
+      dest = "sysui/docs.png"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/drawing.jpeg")
+      dest = "sysui/drawing.jpeg"
+    },
+
+    {
+      path = rebase_path(
+              "agents/home_work_agent/assets/logo_mostly_sunny_light_color_96dp.png")
+      dest = "sysui/logo_mostly_sunny_light_color_96dp.png"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/miguel_cc0.png")
+      dest = "sysui/miguel_cc0.png"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/sophie_cc0.jpg")
+      dest = "sysui/sophie_cc0.jpg"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/threepeaks.png")
+      dest = "sysui/threepeaks.png"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/truefood.png")
+      dest = "sysui/truefood.png"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/cinefilm_96.png")
+      dest = "sysui/cinefilm_96.png"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/expenses_96.png")
+      dest = "sysui/expenses_96.png"
+    },
+
+    {
+      path = rebase_path(
+              "agents/home_work_agent/assets/logo_fitness_color_2x_web_96.png")
+      dest = "sysui/logo_fitness_color_2x_web_96.png"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/simon_96.jpg")
+      dest = "sysui/simon_96.jpg"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/story_calendar.png")
+      dest = "sysui/story_calendar.png"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/story_cinefilm.png")
+      dest = "sysui/story_cinefilm.png"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/story_expense.png")
+      dest = "sysui/story_expense.png"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/story_marketing.png")
+      dest = "sysui/story_marketing.png"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/story_overthrough.png")
+      dest = "sysui/story_overthrough.png"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/story_phonecall.png")
+      dest = "sysui/story_phonecall.png"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/story_steps.png")
+      dest = "sysui/story_steps.png"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/story_threepeaks.png")
+      dest = "sysui/story_threepeaks.png"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/story_toetheline.png")
+      dest = "sysui/story_toetheline.png"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/story_truefoods.png")
+      dest = "sysui/story_truefoods.png"
+    },
+
+    {
+      path = rebase_path("agents/home_work_agent/assets/tahiti_240.png")
+      dest = "sysui/tahiti_240.png"
+    },
+  ]
+}
+
+package("sysui_tests") {
+  testonly = true
+
+  deps = [
+    "//apps/sysui/armadillo:test",
+    "//apps/sysui/capybara_user_shell:test",
+    "//apps/sysui/keyboard:test",
+    "//apps/sysui/userpicker_device_shell:test",
+    "//apps/sysui/widgets:test",
+  ]
+}

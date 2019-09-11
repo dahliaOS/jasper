@@ -1,0 +1,37 @@
+name: observe
+version: 0.15.1
+author: Polymer.dart Authors <web-ui-dev@dartlang.org>
+description: >
+  Observable properties and objects for use in template_binding.
+  Template Binding extends HTML and the DOM APIs to support a sensible
+  separation between the UI (DOM) of a document or application and its
+  underlying data (model). Updates to the model are reflected in the DOM and
+  user input into the DOM is immediately assigned to the model.
+homepage: https://www.dartlang.org/polymer-dart/
+dependencies:
+  analyzer: '>=0.29.11 <0.30.0'
+  barback: '>=0.14.2 <0.16.0'
+  func: '>=0.1.0 <2.0.0'
+  logging: '>=0.9.0 <0.12.0'
+  observable: '>=0.17.0 <0.21.0'
+  path: '>=0.9.0 <2.0.0'
+  smoke: '>=0.1.0 <0.4.0'
+  source_maps: '>=0.9.4 <0.11.0'
+  source_span: ^1.0.0
+  utf: ^0.9.0
+  code_transformers: '>=0.4.2 <0.6.0'
+dev_dependencies:
+  benchmark_harness: '>=1.0.0 <2.0.0'
+  browser: any
+  chart: '>=1.0.8 <2.0.0'
+  test: '^0.12.18+1'
+  stack_trace: '>=0.9.1 <2.0.0'
+environment:
+  sdk: ">=1.9.0 <2.0.0"
+transformers:
+- observe:
+    files:
+      - benchmark/test_observable.dart
+      - benchmark/test_path_observable.dart
+- test/pub_serve:
+    $include: test/**_test.dart

@@ -1,0 +1,13 @@
+# Copyright 2016 The Fuchsia Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+name: auth
+dependencies:
+  googleapis_auth:
+    git: https://github.com/jxson/googleapis_auth.git
+  googleapis: ^0.32.0
+  http: ^0.11.3
+  path: ^1.4.0
+  config:
+    path: ../../packages/config

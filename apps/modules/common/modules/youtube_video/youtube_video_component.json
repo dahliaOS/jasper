@@ -1,0 +1,21 @@
+{
+  "fuchsia:component": {
+    "name": "youtube_video",
+    "url": "file:///system/apps/youtube_video"
+  },
+  "fuchsia:program": {
+    "resource": "main"
+  },
+  "fuchsia:resources": {
+    "main": "youtube_video_component"
+  },
+  "fuchsia:module": {
+    "contract": "view",
+    "data_preconditions": [{
+      "host": [ "www.youtube.com", "music.youtube.com", "m.youtube.com" ],
+      "path": [ "/watch", "/watch_videos" ]
+    }, {
+      "host": "youtu.be"
+    }]
+  }
+}

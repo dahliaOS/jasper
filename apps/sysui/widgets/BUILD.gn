@@ -1,0 +1,27 @@
+# Copyright 2016 The Fuchsia Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+import("//build/dart/dart_package.gni")
+import("//build/dart/dart_test.gni")
+
+dart_package("widgets") {
+  package_name = "sysui_widgets"
+
+  analysis_options = "//apps/sysui/.analysis_options"
+
+  deps = [
+    "//lib/flutter/packages/flutter",
+    "//lib/widgets/packages/widgets:lib.widgets",
+  ]
+}
+
+dart_test("test") {
+  analysis_options = "//apps/sysui/.analysis_options"
+
+  deps = [
+    "//apps/sysui/widgets",
+    "//lib/flutter/packages/flutter_test",
+    "//third_party/dart-pkg/pub/test",
+  ]
+}

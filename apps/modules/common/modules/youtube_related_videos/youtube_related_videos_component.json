@@ -1,0 +1,12 @@
+{
+  "fuchsia:component": {
+    "name": "youtube_related_videos",
+    "url": "file:///system/apps/youtube_related_videos"
+  },
+  "fuchsia:program": {
+    "resource": "main"
+  },
+  "fuchsia:resources": {
+    "main": "youtube_related_videos_component"
+  }
+}
