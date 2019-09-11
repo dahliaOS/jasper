@@ -1,0 +1,533 @@
+{
+  "stories": [
+    {
+      "id": "story_00",
+      "title": "Story Alpha",
+      "color": "0xFFFF5722",
+      "avatar": "packages/armadillo/res/User.png",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "lastInteraction": "0",
+      "culmulativeInteraction": "25",
+      "module": "image",
+      "state": {
+        "image": "packages/armadillo/res/placeholder_grid.png",
+        "imageWide": "packages/armadillo/res/placeholder_grid.png"
+      }
+    },
+    {
+      "id": "story_01",
+      "title": "Email",
+      "color": "0xFFFF9800",
+      "avatar": "packages/armadillo/res/User.png",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "lastInteraction": "5",
+      "culmulativeInteraction": "50",
+      "module": "email/quarterback",
+      "state": {}
+    },
+    {
+      "id": "story_07",
+      "title": "Story Eta",
+      "color": "0xFF4CAF50",
+      "avatar": "packages/armadillo/res/User.png",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "lastInteraction": "80",
+      "culmulativeInteraction": "5",
+      "module": "image",
+      "state": {
+        "image": "packages/armadillo/res/placeholder_grid.png"
+      }
+    },
+    {
+      "id": "story_06",
+      "title": "Story Zeta",
+      "color": "0xFF8BC34A",
+      "avatar": "packages/armadillo/res/User.png",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "lastInteraction": "160",
+      "culmulativeInteraction": "20",
+      "module": "image",
+      "state": {
+        "image": "packages/armadillo/res/placeholder_grid.png"
+      }
+    },
+    {
+      "id": "story_08",
+      "title": "Story Theta",
+      "color": "0xFF009688",
+      "avatar": "packages/armadillo/res/User.png",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "lastInteraction": "320",
+      "culmulativeInteraction": "5",
+      "module": "image",
+      "state": {
+        "image": "packages/armadillo/res/placeholder_grid.png"
+      }
+    },
+    {
+      "id": "story_09",
+      "title": "Story Iota",
+      "color": "0xFF00BCD4",
+      "avatar": "packages/armadillo/res/User.png",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "lastInteraction": "640",
+      "culmulativeInteraction": "10",
+      "module": "image",
+      "state": {
+        "image": "packages/armadillo/res/placeholder_grid.png"
+      }
+    },
+    {
+      "id": "story_10",
+      "title": "Story Kappa",
+      "color": "0xFF03A9F4",
+      "avatar": "packages/armadillo/res/User.png",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "lastInteraction": "1280",
+      "culmulativeInteraction": "20",
+      "module": "image",
+      "state": {
+        "image": "packages/armadillo/res/placeholder_grid.png"
+      }
+    },
+    {
+      "id": "story_11",
+      "title": "Story Lambda",
+      "color": "0xFF2196F3",
+      "avatar": "packages/armadillo/res/User.png",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "lastInteraction": "2560",
+      "culmulativeInteraction": "30",
+      "module": "image",
+      "state": {
+        "image": "packages/armadillo/res/placeholder_grid.png"
+      }
+    },
+    {
+      "id": "story_12",
+      "title": "Story Mu",
+      "color": "0xFF3F51B5",
+      "avatar": "packages/armadillo/res/User.png",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "lastInteraction": "5120",
+      "culmulativeInteraction": "40",
+      "module": "image",
+      "state": {
+        "image": "packages/armadillo/res/placeholder_grid.png"
+      }
+    },
+    {
+      "id": "story_13",
+      "title": "Story Nu",
+      "color": "0xFF673AB7",
+      "avatar": "packages/armadillo/res/User.png",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "lastInteraction": "10000",
+      "culmulativeInteraction": "50",
+      "module": "image",
+      "state": {
+        "image": "packages/armadillo/res/placeholder_grid.png"
+      }
+    },
+    {
+      "id": "story_14",
+      "title": "Story Xi",
+      "color": "0xFF9C27B0",
+      "avatar": "packages/armadillo/res/User.png",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "lastInteraction": "10000",
+      "culmulativeInteraction": "60",
+      "module": "image",
+      "state": {
+        "image": "packages/armadillo/res/placeholder_grid.png"
+      }
+    },
+    {
+      "id": "story_15",
+      "title": "Story Omicron",
+      "color": "0xFFE91E63",
+      "avatar": "packages/armadillo/res/User.png",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "lastInteraction": "10000",
+      "culmulativeInteraction": "0",
+      "module": "image",
+      "state": {
+        "image": "packages/armadillo/res/placeholder_grid.png"
+      }
+    },
+    {
+      "id": "story_16",
+      "title": "Story Pi Rho Sigma Tau Upsilon Phi Chi Psi Omega",
+      "color": "0xFFF44336",
+      "avatar": "packages/armadillo/res/User.png",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "lastInteraction": "10000",
+      "culmulativeInteraction": "10",
+      "module": "image",
+      "state": {
+        "image": "packages/armadillo/res/placeholder_grid.png"
+      }
+    },
+    {
+      "id": "story_17",
+      "title": "Story Xi",
+      "color": "0xFF9C27B0",
+      "avatar": "packages/armadillo/res/User.png",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "lastInteraction": "10000",
+      "culmulativeInteraction": "60",
+      "module": "image",
+      "state": {
+        "image": "packages/armadillo/res/placeholder_grid.png"
+      }
+    },
+    {
+      "id": "story_18",
+      "title": "Story Omicron",
+      "color": "0xFFE91E63",
+      "avatar": "packages/armadillo/res/User.png",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "lastInteraction": "10000",
+      "culmulativeInteraction": "0",
+      "module": "image",
+      "state": {
+        "image": "packages/armadillo/res/placeholder_grid.png"
+      }
+    },
+    {
+      "id": "story_19",
+      "title": "Story Pi Rho Sigma Tau Upsilon Phi Chi Psi Omega",
+      "color": "0xFFF44336",
+      "avatar": "packages/armadillo/res/User.png",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "lastInteraction": "10000",
+      "culmulativeInteraction": "10",
+      "module": "image",
+      "state": {
+        "image": "packages/armadillo/res/placeholder_grid.png"
+      }
+    },
+    {
+      "id": "story_inactive",
+      "title": "Story Inactive",
+      "color": "0xFF808080",
+      "avatar": "packages/armadillo/res/User.png",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "lastInteraction": "10000",
+      "culmulativeInteraction": "10",
+      "module": "image",
+      "state": {
+        "image": "packages/armadillo/res/placeholder_grid.png"
+      },
+      "inactive": "true"
+    }
+  ],
+  "suggestions": [
+    {
+      "id": "suggestion_01",
+      "title": "Suggestion Ichi",
+      "color": "0xFFF44336",
+      "selection_type": "launch",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "image": "packages/armadillo/res/placeholder_grid.png",
+      "image_type": "person",
+      "story_id": "story_16"
+    },
+    {
+      "id": "suggestion_02",
+      "title": "Suggestion Ni",
+      "color": "0xFFE91E63",
+      "selection_type": "launch",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "image": "packages/armadillo/res/placeholder_grid.png",
+      "image_type": "other",
+      "story_id": "story_15"
+    },
+    {
+      "id": "suggestion_03",
+      "title": "Suggestion San",
+      "color": "0xFF9C27B0",
+      "selection_type": "launch",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "image": "packages/armadillo/res/placeholder_grid.png",
+      "image_type": "person",
+      "story_id": "story_14"
+    },
+    {
+      "id": "suggestion_04",
+      "title": "Suggestion Shi",
+      "color": "0xFF673AB7",
+      "selection_type": "launch",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "image": "packages/armadillo/res/placeholder_grid.png",
+      "image_type": "other",
+      "story_id": "story_13"
+    },
+    {
+      "id": "suggestion_05",
+      "title": "Suggestion Go",
+      "color": "0xFF3F51B5",
+      "selection_type": "launch",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "image": "packages/armadillo/res/placeholder_grid.png",
+      "image_type": "other",
+      "story_id": "story_12"
+    },
+    {
+      "id": "suggestion_06",
+      "title": "Suggestion Rok - Let's make this really long so it wraps",
+      "color": "0xFF2196F3",
+      "selection_type": "launch",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png",
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "image": "packages/armadillo/res/placeholder_grid.png",
+      "image_type": "person",
+      "story_id": "story_11"
+    },
+    {
+      "id": "suggestion_07",
+      "title": "Suggestion Nana",
+      "color": "0xFF03A9F4",
+      "selection_type": "launch",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "story_id": "story_10"
+    },
+    {
+      "id": "suggestion_08",
+      "title": "Suggestion Hachi",
+      "color": "0xFF00BCD4",
+      "selection_type": "modify",
+      "story_id": "story_09"
+    },
+    {
+      "id": "suggestion_09",
+      "title": "Suggestion Kyuu",
+      "color": "0xFF009688",
+      "selection_type": "modify",
+      "story_id": "story_08"
+    },
+    {
+      "id": "suggestion_10",
+      "title": "Suggestion Juu",
+      "color": "0xFF4CAF50",
+      "selection_type": "modify",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "image": "packages/armadillo/res/placeholder_grid.png",
+      "image_type": "other",
+      "story_id": "story_07"
+    },
+    {
+      "id": "suggestion_11",
+      "title": "Suggestion Dummy",
+      "selection_type": "dummy",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "image": "packages/armadillo/res/placeholder_grid.png",
+      "image_type": "person"
+    },
+    {
+      "id": "suggestion_activate",
+      "title": "Activate Inactive Story",
+      "selection_type": "launch",
+      "icons": [
+        "packages/armadillo/res/flutter-mark-square-100.png"
+      ],
+      "image": "packages/armadillo/res/placeholder_grid.png",
+      "image_type": "other",
+      "story_id": "story_inactive"
+    }
+  ],
+  "story_suggestions_map": {
+    "none": [
+      "suggestion_01",
+      "suggestion_02",
+      "suggestion_03",
+      "suggestion_04",
+      "suggestion_05",
+      "suggestion_06",
+      "suggestion_07",
+      "suggestion_08",
+      "suggestion_09",
+      "suggestion_10",
+      "suggestion_11",
+      "suggestion_activate"
+    ],
+    "ask": [
+      "suggestion_01",
+      "suggestion_02",
+      "suggestion_03",
+      "suggestion_04",
+      "suggestion_05",
+      "suggestion_06",
+      "suggestion_07",
+      "suggestion_08",
+      "suggestion_09",
+      "suggestion_10",
+      "suggestion_11",
+      "suggestion_activate"
+    ],
+    "story_01": [
+      "suggestion_01",
+      "suggestion_02",
+      "suggestion_03",
+      "suggestion_04",
+      "suggestion_05"
+    ],
+    "story_02": [
+      "suggestion_02",
+      "suggestion_03",
+      "suggestion_04",
+      "suggestion_05",
+      "suggestion_06"
+    ],
+    "story_03": [
+      "suggestion_07",
+      "suggestion_08",
+      "suggestion_09"
+    ],
+    "story_04": [
+      "suggestion_10",
+      "suggestion_01",
+      "suggestion_02"
+    ],
+    "story_05": [
+      "suggestion_03",
+      "suggestion_04",
+      "suggestion_05"
+    ],
+    "story_06": [
+      "suggestion_10",
+      "suggestion_03",
+      "suggestion_01"
+    ],
+    "story_07": [
+      "suggestion_01",
+      "suggestion_02",
+      "suggestion_03"
+    ],
+    "story_08": [
+      "suggestion_02",
+      "suggestion_01",
+      "suggestion_03"
+    ],
+    "story_09": [
+      "suggestion_05",
+      "suggestion_03",
+      "suggestion_04"
+    ],
+    "story_10": [
+      "suggestion_06",
+      "suggestion_03",
+      "suggestion_05"
+    ],
+    "story_11": [
+      "suggestion_07",
+      "suggestion_03",
+      "suggestion_01"
+    ],
+    "story_12": [
+      "suggestion_08",
+      "suggestion_03",
+      "suggestion_01"
+    ],
+    "story_13": [
+      "suggestion_09",
+      "suggestion_03",
+      "suggestion_01"
+    ],
+    "story_14": [
+      "suggestion_07",
+      "suggestion_03",
+      "suggestion_02"
+    ],
+    "story_15": [
+      "suggestion_02",
+      "suggestion_03",
+      "suggestion_04"
+    ],
+    "story_16": [
+      "suggestion_01",
+      "suggestion_02",
+      "suggestion_03"
+    ]
+  }
+}
