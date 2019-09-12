@@ -1,5 +1,5 @@
-# pangolin-ui
-mobile shell for dahlia
+# pangolin-mobile
+based on the old armadillo UI.
 
 ## To Use
 
