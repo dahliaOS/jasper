@@ -1,5 +1,0 @@
-This is a test text file.
-
-ProjectName: HelloWorld
-projectName: helloWorld
-project_name: hello_world

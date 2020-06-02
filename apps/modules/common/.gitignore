@@ -1,8 +1,0 @@
-_book
-node_modules
-third_party
-coverage
-*.mojom.*
-**/.analysis_options
-.packages
-config.json

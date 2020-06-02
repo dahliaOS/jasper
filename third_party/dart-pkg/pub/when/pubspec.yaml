@@ -1,7 +1,0 @@
-name: when
-version: 0.2.0
-author: Sean Eagan <seaneagan1@gmail.com>
-description: Register callbacks on code which is conditionally sync or async.
-homepage: https://github.com/seaneagan/when.dart
-dev_dependencies:
-  unittest: '>=0.11.4 <0.12.0'

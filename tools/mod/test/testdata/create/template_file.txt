@@ -1,5 +1,0 @@
-This is a template file.
-
-ProjectName: __ProjectName__
-projectName: __projectName__
-project_name: __project_name__

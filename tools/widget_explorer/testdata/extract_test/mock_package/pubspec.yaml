@@ -1,7 +1,0 @@
-name: mock_package
-description: mock package
-dependencies:
-  flutter:
-    sdk: flutter
-  widget_explorer_meta:
-    path: ../../../packages/widget_explorer_meta

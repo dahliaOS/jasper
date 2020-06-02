@@ -1,7 +1,0 @@
-.children
-.idea
-.packages
-.pub
-build/
-packages
-pubspec.lock
