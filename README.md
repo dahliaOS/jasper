@@ -1,16 +1,32 @@
-# pangolin_mobile
+<p align="center">
+  <img width="120%" src="https://github.com/dahlia-os/brand/blob/master/Pangolin%20Logo%20SVGs/Pangolin%20logo%20with%20text%20(black)%20on%20a%20white%20background.svg"
+</p>
 
-A new Flutter project.
+<p align="center">
+<a href="https://dahliaos.io">Website</a> ●
+<a href="https://discord.gg/7qVbJHR">Discord</a> ●
+<a href="https://github.com/dahlia-os/releases/releases">Releases</a> ●
+<a href="https://paypal.me/officialdahliaos">Donate</a> ●
+<a href="https://github.com/dahlia-os/documentation">Documentation</a>
 
-## Getting Started
+# Pangolin Mobile UI
+![GitHub issues](https://img.shields.io/github/issues/dahlia-os/pangolin-mobile?color=brightgreen)
+![GitHub](https://img.shields.io/github/license/dahlia-os/pangolin-mobile?color=brightgreen)
 
-This project is a starting point for a Flutter application.
+ - **Pangolin UI** is a Mobile shell for dahliaOS, written in Flutter
+ - **Pangolin** was named after a shelled animal like the [Armadillo UI](https://9to5google.com/2018/12/26/fuchsia-armadillo-ui-gone/)
 
-A few resources to get you started if this is your first Flutter project:
+## Contribute
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+If you're wondering how to contribute to the project, please refer to [CONTRIBUTING.md](./CONTRIBUTING.md)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## License
+
+<p align="left">
+  <img width="40%" src="https://github.com/dahlia-os/brand/blob/master/Logo%20PNGs/dahliaOS%20logo%20with%20text%20(drop%20shadow).png"
+</p>
+
+Copyright @ 2019-2020 The dahliaOS Authors contact@dahliaos.io
+
+This project is licensed under the [Apache 2.0 license](/LICENSE)
