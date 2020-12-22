@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Create a report to help us improve the desktop
+about: Create a report to help us improve the Pangolin Mobile environment
 title: ''
 labels: ''
 assignees: ''
@@ -25,10 +25,6 @@ A clear and concise description of what you expected to happen.
 
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
-
-**Desktop (please complete the following information):**
- - OS: [e.g. dahliaOS Linux, dahliaOS Zircon]
- - Device: [e.g. MacbookPro9,1, QEMU]
 
 **Smartphone (please complete the following information):**
  - Device: [e.g. iPhone6]
