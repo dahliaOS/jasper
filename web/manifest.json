@@ -1,6 +1,6 @@
 {
-    "name": "pangolin_mobile",
-    "short_name": "pangolin_mobile",
+    "name": "jasper",
+    "short_name": "jasper",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
