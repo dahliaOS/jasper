@@ -10,8 +10,8 @@
 <a href="https://github.com/dahliaos/documentation">Documentation</a>
 
 # Pangolin Mobile UI
-![GitHub issues](https://img.shields.io/github/issues/dahliaos/pangolin-mobile?color=brightgreen)
-![GitHub](https://img.shields.io/github/license/dahliaos/pangolin-mobile?color=brightgreen)
+![GitHub issues](https://img.shields.io/github/issues/dahliaos/pangolin_mobile?color=brightgreen)
+![GitHub](https://img.shields.io/github/license/dahliaos/pangolin_mobile?color=brightgreen)
 
  - **Pangolin UI** is a Mobile shell for dahliaOS, written in Flutter
  - **Pangolin** was named after a shelled animal like the [Armadillo UI](https://9to5google.com/2018/12/26/fuchsia-armadillo-ui-gone/)
