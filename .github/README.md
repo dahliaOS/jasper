@@ -17,7 +17,7 @@
  - **Pangolin** was named after a shelled animal like the [Armadillo UI](https://9to5google.com/2018/12/26/fuchsia-armadillo-ui-gone/)
 
 ## Installing
-First things first, boot up your Pinephone with Phosh, for some reason Plamo doesn't like it. Arch, Postmarket or anything else will do. Then you'll want to download the tarball of Pangolin Mobile onto the devices and extract it wherever you'd like. Then in the terminal application find the folder (should be called "bundle" and type `cd bundle` followed by `./pangolin_mobile` and it will start up.   
+First things first, boot up your Pinephone with Phosh, for some reason Plamo doesn't like it. Arch, Postmarket or anything else will do. Then you'll want to download the tarball of Pangolin Mobile onto the device and extract it wherever you'd like. Then in the terminal application find the folder (should be called "bundle" and type `cd bundle` followed by `./pangolin_mobile` and it will start up.   
 
 ## Contribute
 
