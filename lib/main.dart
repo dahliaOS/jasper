@@ -7,19 +7,6 @@ import 'widgets/launcher.dart';
 import 'widgets/application-utils.dart';
 import 'package:flutter/services.dart';
 //APPLCATION IMPORTS
-import 'applications/authenticator/main.dart';
-import 'applications/calculator/calculator.dart';
-import 'applications/clock/main.dart';
-import 'applications/containers/containers.dart';
-import 'applications/developer/developer.dart';
-import 'applications/editor/editor.dart';
-import 'applications/files/main.dart';
-import 'applications/logging/logging.dart';
-import 'applications/messages/main.dart';
-import 'applications/monitor/monitor.dart';
-import 'applications/terminal/main.dart';
-import 'applications/terminal/root/main.dart';
-import 'applications/welcome/welcome.dart';
 
 void main() {
   runApp(new Jasper());
@@ -208,18 +195,6 @@ class _JasperHomePageState extends State<JasperHomePage> {
                         child: Wrap(
                           spacing: 10.0,
                           children: [
-                            drawerIcon('assets/images/icons/PNG/calculator.png',
-                                Colors.red, "executable"),
-                            drawerIcon(
-                                'assets/images/icons/PNG/note_mobile.png',
-                                Colors.red,
-                                "executable"),
-                            drawerIcon('assets/images/icons/PNG/terminal.png',
-                                Colors.red, "executable"),
-                            drawerIcon('assets/images/icons/PNG/logs.png',
-                                Colors.red, "executable"),
-                            drawerIcon('assets/images/icons/PNG/developer.png',
-                                Colors.red, "executable"),
                           ],
                         ),
                       ))
@@ -247,150 +222,6 @@ class _JasperHomePageState extends State<JasperHomePage> {
                       child: new Container(
                           padding: EdgeInsets.only(top: 15),
                           child: Wrap(spacing: 15.0, children: [
-                            launcherIcon(
-                                "assets/images/icons/PNG/authenticator.png",
-                                Colors.red,
-                                Colors.white,
-                                "Authenticator",
-                                Calculator(),
-                                false,
-                                context),
-                            launcherIcon(
-                                "assets/images/icons/PNG/calculator.png",
-                                Colors.green,
-                                Colors.white,
-                                "Calculator",
-                                Calculator(),
-                                true,
-                                context),
-                            launcherIcon(
-                                "assets/images/icons/PNG/clock.png",
-                                Colors.blue[900],
-                                Colors.white,
-                                "Clock",
-                                Clock(),
-                                true,
-                                context),
-                            launcherIcon(
-                                "assets/images/icons/PNG/containers.png",
-                                Colors.blue[700],
-                                Colors.white,
-                                "Containers",
-                                Containers(),
-                                true,
-                                context),
-                            launcherIcon(
-                                "assets/images/icons/PNG/developer.png",
-                                Colors.red[700],
-                                Colors.white,
-                                "Developer Options",
-                                DeveloperApp(),
-                                true,
-                                context),
-                            launcherIcon(
-                                "assets/images/icons/PNG/disks.png",
-                                Colors.red[700],
-                                Colors.white,
-                                "Disks",
-                                DeveloperApp(),
-                                false,
-                                context),
-                            launcherIcon(
-                                "assets/images/icons/PNG/files.png",
-                                Colors.deepOrange[700],
-                                Colors.white,
-                                "Files",
-                                Files(),
-                                true,
-                                context),
-                            launcherIcon(
-                                "assets/images/icons/PNG/help.png",
-                                Colors.deepOrange[700],
-                                Colors.white,
-                                "Help",
-                                Files(),
-                                false,
-                                context),
-                            launcherIcon(
-                                "assets/images/icons/PNG/logs.png",
-                                Colors.red[700],
-                                Colors.white,
-                                "Logs",
-                                Logs(),
-                                true,
-                                context),
-                            launcherIcon(
-                                "assets/images/icons/PNG/messages.png",
-                                Colors.purple[700],
-                                Colors.white,
-                                "Messages",
-                                Messages(),
-                                true,
-                                context),
-                            launcherIcon(
-                                "assets/images/icons/PNG/files.png",
-                                Colors.deepOrange[700],
-                                Colors.white,
-                                "Music",
-                                Files(),
-                                false,
-                                context),
-                            launcherIcon(
-                                "assets/images/icons/PNG/note_mobile.png",
-                                Colors.amber[700],
-                                Colors.white,
-                                "Notes",
-                                TextEditorApp(),
-                                true,
-                                context),
-                            launcherIcon(
-                                "assets/images/icons/PNG/photos.png",
-                                Colors.deepOrange[700],
-                                Colors.white,
-                                "Media",
-                                Files(),
-                                false,
-                                context),
-                            launcherIcon(
-                                "assets/images/icons/PNG/root.png",
-                                Colors.red[700],
-                                Colors.white,
-                                "Root Terminal",
-                                RootTerminalApp(),
-                                true,
-                                context),
-                            launcherIcon(
-                                "assets/images/icons/PNG/settings.png",
-                                Colors.deepOrange[700],
-                                Colors.white,
-                                "Settings",
-                                DeveloperApp(),
-                                true,
-                                context),
-                            launcherIcon(
-                                "assets/images/icons/PNG/terminal.png",
-                                Colors.grey[900],
-                                Colors.white,
-                                "Terminal",
-                                TerminalApp(),
-                                true,
-                                context),
-                            launcherIcon(
-                                "assets/images/icons/PNG/theme.png",
-                                Colors.deepOrange[700],
-                                Colors.white,
-                                "Theme Demo",
-                                Files(),
-                                true,
-                                context),
-                            launcherIcon(
-                                "assets/images/icons/PNG/welcome-info.png",
-                                Colors.white,
-                                Colors.black,
-                                "Welcome",
-                                Welcome(),
-                                true,
-                                context),
                           ])),
                     ),
                   )
