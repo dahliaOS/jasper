@@ -7,6 +7,7 @@ import 'widgets/launcher.dart';
 import 'widgets/application-utils.dart';
 import 'package:flutter/services.dart';
 //APPLCATION IMPORTS
+import 'applications/calculator/calculator.dart';
 
 void main() {
   runApp(new Jasper());
@@ -195,6 +196,8 @@ class _JasperHomePageState extends State<JasperHomePage> {
                         child: Wrap(
                           spacing: 10.0,
                           children: [
+                            drawerIcon('assets/images/icons/PNG/calculator.png',
+                                Colors.red, "executable"),
                           ],
                         ),
                       ))
@@ -222,6 +225,14 @@ class _JasperHomePageState extends State<JasperHomePage> {
                       child: new Container(
                           padding: EdgeInsets.only(top: 15),
                           child: Wrap(spacing: 15.0, children: [
+                            launcherIcon(
+                                "assets/images/icons/PNG/calculator.png",
+                                Colors.green,
+                                Colors.white,
+                                "Calculator",
+                                Calculator(),
+                                true,
+                                context),
                           ])),
                     ),
                   )
