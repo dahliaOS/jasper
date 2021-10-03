@@ -1,0 +1,10 @@
+{
+      "id": "io.dahliaos.pangolin_mobile",
+      "altName": "pangolin_mobile",
+      "realName": "Pangolin Mobile",
+      "version": "dahliaOS-latest",
+      "description": "Mobile developer shell for dahliaOS",
+      "sourceCode": "https://github.com/dahliaOS/media",
+      "hash": "DAP_AUTOMATION_PKGHASH",
+      "architecture": "x86_64"
+},
