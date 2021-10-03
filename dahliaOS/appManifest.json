@@ -4,7 +4,7 @@
       "realName": "Pangolin Mobile",
       "version": "dahliaOS-latest",
       "description": "Mobile developer shell for dahliaOS",
-      "sourceCode": "https://github.com/dahliaOS/media",
+      "sourceCode": "https://github.com/dahliaOS/pangolin_mobile",
       "hash": "DAP_AUTOMATION_PKGHASH",
       "architecture": "x86_64"
 },
