@@ -1,5 +1,11 @@
 <p align="center">
-  <img width="120%" src="https://github.com/dahliaos/brand/blob/master/Pangolin%20Logo%20SVGs/Pangolin%20logo%20with%20text%20(black)%20on%20a%20white%20background.svg"
+  <img width="30%" src="https://raw.githubusercontent.com/dahliaOS/brand/master/dahliaOS/svg/logotypewhitetext.svg#gh-dark-mode-only"
+  
+</p>
+  
+<p align="center">
+  <img width="30%" src="https://github.com/dahliaOS/brand/blob/master/dahliaOS/svg/logotypeblacktext.svg#gh-light-mode-only"
+  
 </p>
 
 <p align="center">
@@ -25,11 +31,16 @@ If you're wondering how to contribute to the project, please refer to [CONTRIBUT
 
 
 ## License
-
 <p align="left">
-  <img width="40%" src="https://github.com/dahliaos/brand/blob/master/Logo%20PNGs/dahliaOS%20logo%20with%20text%20(drop%20shadow).png"
+  <img width="45%" src="https://raw.githubusercontent.com/dahliaOS/brand/master/dahliaOS/svg/logotypewhitetext.svg#gh-dark-mode-only"
+  
+</p>
+  
+<p align="left">
+  <img width="45%" src="https://github.com/dahliaOS/brand/blob/master/dahliaOS/svg/logotypeblacktext.svg#gh-light-mode-only"
+  
 </p>
 
-Copyright @ 2019-2021 The dahliaOS Authors contact@dahliaos.io
+Copyright @ 2019-2022 The dahliaOS Authors contact@dahliaos.io
 
 This project is licensed under the [Apache 2.0 license](/LICENSE)
