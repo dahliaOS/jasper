@@ -5,13 +5,17 @@
 <a href="https://paypal.me/officialdahliaos">Donate</a> ●
 <a href="https://github.com/dahliaos/documentation">Documentation</a>
 
-# Pangolin Mobile UI
-![GitHub issues](https://img.shields.io/github/issues/dahliaos/pangolin_mobile?color=brightgreen)
-![GitHub](https://img.shields.io/github/license/dahliaos/pangolin_mobile?color=brightgreen)
+# Jasper
+![GitHub issues](https://img.shields.io/github/issues/dahliaos/jasper?color=brightgreen)
+![GitHub](https://img.shields.io/github/license/dahliaos/jasper?color=brightgreen)
+Jasper is a minimal, locked-down development shell for Fuchsia and Linux, with the intention of having little to no dependencies on external resources. 
 
- - **Pangolin UI** is a Mobile shell for dahliaOS, written in Flutter
+# If you're here from Pangolin Mobile:
+
+ - **Pangolin UI** was a Mobile shell for dahliaOS, written in Flutter
  - **Pangolin** was named after a shelled animal like the [Armadillo UI](https://9to5google.com/2018/12/26/fuchsia-armadillo-ui-gone/)
-
+ - Pangolin Mobile was ultimately replaced by Pangolin Desktop becoming convergent 
+ 
 ## Installing
 First things first, boot up your Pinephone with Phosh, for some reason Plamo doesn't like it. Arch, Postmarket or anything else will do. Then you'll want to download the tarball of Pangolin Mobile onto the device and extract it wherever you'd like. Then in the terminal application find the folder (should be called "bundle" and type `cd bundle` followed by `./pangolin_mobile` and it will start up.   
 
